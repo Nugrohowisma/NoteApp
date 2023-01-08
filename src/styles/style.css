@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --font-color: #022c43;
+  --background-color: #f5f5f5;
+  --background-card: #ececec;
+  --background-list: #f5f5f5;
+  --background-border: #27b1be;
+  --background-delete: #ff8356;
+  --input-color: #022c43;
+}
+
+[data-theme="dark"] {
+  --font-color: white;
+  --background-color: #022c43;
+  --background-card: #053f5e;
+  --background-list: #115173;
+  --background-border: #ffd700;
+  --background-delete: #e94560;
+  --input-color: white;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  padding: 0 4%;
+}
+
+* {
+  box-sizing: border-box;
+  transition: background 0.3s ease-in;
+}
+
+nav {
+  margin-top: 20px;
+  display: block;
+}
+
+.logo {
+  align-items: center;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.theme {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--background-border);
+  font-size: 20px;
+  color: var(--background-border);
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  float: right;
+  transition: 0.3s;
+}
+
+.theme:hover {
+  background-color: var(--background-border);
+  color: var(--font-color);
+}
+
+.out {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--background-delete);
+  font-size: 20px;
+  color: var(--background-delete);
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  float: right;
+  transition: 0.3s;
+}
+
+.out:hover {
+  background-color: var(--background-delete);
+  color: var(--font-color);
+}
+
+.logo {
+  align-items: center;
+  background-color: transparent;
+  font-size: 20px;
+  color: var(--font-color);
+  margin: 2px;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+}
+
+.viw {
+  margin-bottom: 40px;
+}
+
+.input {
+  width: 300px;
+  display: block;
+  color: var(--input-color);
+  padding: 12px;
+  margin: 12px 0;
+  background-color: var(--background-card);
+  border: none;
+  border-radius: 8px;
+  animation: Search 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes Search {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.new {
+  display: block;
+  background-color: var(--background-card);
+  border-radius: 8px;
+  padding: 12px;
+  animation: Fade 0.5s ease 0s 1 normal forwards;
+}
+
+.new input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  background-color: var(--background-list);
+  color: var(--font-color);
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+.List-Note {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(min-content, max-content);
+  gap: 1rem;
+  margin-bottom: 40px;
+}
+
+.List-Item {
+  background-color: var(--background-card);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  animation: Fade 0.5s ease 0s 1 normal forwards;
+}
+
+.List-Item-content {
+  padding: 12px;
+  flex: 1;
+}
+
+h3 {
+  border-left: 10px solid var(--background-border);
+  font-size: 14px;
+  padding: 8px;
+  background-color: var(--background-list);
+  margin-bottom: 4px;
+  border-radius: 5px 5px 0 0;
+}
+
+h4 {
+  border-left: 10px solid var(--background-border);
+  padding: 8px;
+  background-color: var(--background-card);
+  margin-bottom: 1rem;
+  width: 100px;
+  border-radius: 0 5px 0 5px;
+  animation: h4 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes h4 {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+
+.date {
+  border-left: 10px solid var(--background-border);
+  font-size: 12px;
+  color: #aaa;
+  background-color: var(--background-list);
+  padding: 8px;
+}
+
+.body-text {
+  border-left: 10px solid var(--background-border);
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--font-color);
+  background-color: var(--background-list);
+  padding: 8px;
+  border-radius: 0 0 5px 5px;
+}
+
+.con {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.del {
+  display: block;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--background-delete);
+  font-size: 12px;
+  color: var(--background-delete);
+  border-radius: 4px;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  padding: 8px;
+  width: 50px;
+  transition: 0.3s;
+}
+
+.del:hover {
+  background-color: var(--background-delete);
+  color: var(--font-color);
+}
+
+.viw {
+  display: block;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--background-border);
+  font-size: 12px;
+  color: var(--background-border);
+  border-radius: 4px;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  padding: 8px;
+  width: 50px;
+  transition: 0.3s;
+}
+
+.viw:hover {
+  background-color: var(--background-border);
+  color: var(--font-color);
+}
+
+.home-action {
+  bottom: 32px;
+  display: flex;
+  gap: 16px;
+  position: fixed;
+  right: 32px;
+}
+
+.action {
+  align-items: center;
+  background-color: var(--background-border);
+  color: var(--background-list);
+  font-size: 40px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  padding: 8px;
+  width: 55px;
+  transition: 1s;
+}
+
+.action:hover {
+  background-color: var(--background-card);
+  animation: rotate 1s;
+  color: var(--background-border);
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(90deg);
+  }
+}
+
+.view-note {
+  background-color: var(--background-card);
+  border: 2px solid var(--background-border);
+  border-radius: 8px;
+  animation: Fade 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.content {
+  padding: 12px;
+  animation: Fade 0.5s ease 0s 1 normal forwards;
+}
+
+.NotFound {
+  text-align: center;
+  font-size: 20px;
+  animation: NotFound 1s ease 0s 1 normal forwards;
+}
+
+@keyframes NotFound {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100px);
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .List-Note {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .List-Note {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .List-Note {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.foot {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+}
