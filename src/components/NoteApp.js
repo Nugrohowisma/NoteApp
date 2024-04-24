@@ -156,7 +156,7 @@ class NoteApp extends React.Component {
                 href="https://www.instagram.com/maspan_19/"
                 style={{ textDecoration: "none", color: "grey" }}
               >
-                @Irpan1905
+                @maspan_19
               </a>
             </p>
           </footer>
